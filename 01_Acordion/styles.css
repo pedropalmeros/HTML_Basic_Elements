@@ -14,6 +14,10 @@ body{
 .accordion{
     width: 700px; 
     margin: 100px auto;
+
+    display: flex; 
+    flex-direction: column; 
+    gap: 30px;
 }
 
 .number, .text{
@@ -22,10 +26,16 @@ body{
     color: #087f5b;
 }
 
-.text{
-
-}
 .item{
+
+    box-shadow: 0 0 32px rgba(0,0,0,0.2);
+    padding: 24px;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto; 
+    column-gap: 24px;
+    row-gap: 32px;
+    align-items: center;
 
 }
 .icon{
@@ -34,6 +44,7 @@ body{
     stroke: #087f5b;
 }
 .hidden-box{
+    grid-column: 2;
 
 }
 
@@ -55,6 +66,25 @@ body{
     margin-bottom: 12px; 
 }
 
+.primary{
+    border-top: 4px solid #087f5b;
+}
+
+.secondary .text{
+    color: #343a40;
+}
+
+.secondary .number{
+    color: #868e96;
+}
+
+.secondary .icon{
+    stroke: #868e96
+}
+
+.secondary .hidden-box{
+    display:none;
+}
 /* Pages used::
 heroicons.com
 repo git open-colors
